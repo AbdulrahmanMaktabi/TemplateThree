@@ -693,90 +693,93 @@ header .container .main-nav .mega-menu .links a i{
     color: var(--yellow);
 }
 /* End Testimonials */
-/* Start Team-Members */
 .team-members {
-    position: relative;
     padding-top: var(--section-padding);
     padding-bottom: var(--section-padding);
+    position: relative;
 }
 .team-members .container {
     display: grid;
     grid-template-columns: repeat(auto-fill , minmax(300px , 1fr));
-    gap: 30px;
+    gap : 30px;
 }
 .team-members .container .box {
     position: relative;
+    overflow: hidden;
 }
-.team-members .container .box::before , .team-members .container .box::after{
+.team-members .container .box::before , .team-members .container .box::after {
     content: '';
     position: absolute;
-    right: 0;
-    top:0;
+    top: 0;
+    right:0;
     height: 100%;
     border-radius: 10px;
     transition: var(--transition-time);
 }
 .team-members .container .box::before {
+    z-index: -2;
     width: calc(100% - 60px);
     background-color: var(--section-color);
-    z-index: -2;
 }
 .team-members .container .box::after {
+    right: -100%;
+    background-color: black;
     z-index: -1;
-    width: 0;
-    background-color: #e4e4e4;
+    opacity: .3;
 }
 .team-members .container .box:hover::after {
     width: calc(100% - 60px);
+    right: 0;
 }
-.team-members .container .box .content img {
-    width: calc(100% - 60px) ;
-    border-radius: 10px; 
+.team-members .container .box .content{
+    padding-top: 60px;
+    display: flex;
+    justify-content: space-around;
+    align-items:center;
+}
+.team-members .container .box img{
+    width: calc(100% - 60px);
+    border-radius: 10px;
     transition: var(--transition-time);
 }
-.team-members .container .box:hover .content img {
+.team-members .container .box:hover img{
     filter: grayscale(100%);
 }
-.team-members .container .box .content {
-    display: flex;
-    align-items: center;
-    padding-top: 60px;
-}
-.team-members .container .box .content .icons {
+.team-members .container .box .icons{
     display: flex;
     flex-direction: column;
-    align-items: center;
-    width: 60px;
 }
-.team-members .container .box .content .icons a {
-    width: 60px;
-    height: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.team-members .container .box .icons a{
+    margin-top:15px;
+    color: var(--text-color);
+    transition: var(--transition-time);
 }
-.team-members .container .box .content .icons i {
-    color:var(--text-color);
+.team-members .container .box .icons a:hover{
+    color:var(--main-color);
 }
-.team-members .container .box .content .icons i:hover {
-    color: var(--main-color);
+.team-members .container .box .icons i{
+    font-size: 16px;
 }
-.team-members .container .box .text {
+.team-members .container .text {
     padding-left: 80px;
     padding-bottom: 40px;
 }
-.team-members .container .box .text h3{
+.team-members .container .text h4 {
+    font-size: 21px;
     color: var(--main-color);
-    margin-bottom: 0;
     font-weight: bold;
+    margin-bottom: 0;
     transition: var(--transition-time);
 }
-.team-members .container .box:hover .text h3{
+.team-members .container .box:hover .text h4 {
     color: var(--text-color);
 }
-.team-members .container .box .text p{
-    color:var(--text-color);
+.team-members .container .text p {
+    color: var(--text-color);
+    font-size: 18px;
 }
+/* Start Team-Members */
+
 /* End Team-Members */
 /* Start Animation */
 /* Animation up and down */

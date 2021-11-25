@@ -106,6 +106,7 @@ a {
 /* Font for all elements */
 body {
     font-family: 'Cairo', sans-serif;
+    counter-reset: services-counter;
 }
 .container {
     margin-left: auto;
@@ -693,6 +694,7 @@ header .container .main-nav .mega-menu .links a i{
     color: var(--yellow);
 }
 /* End Testimonials */
+/* Start Team-Member */
 .team-members {
     padding-top: var(--section-padding);
     padding-bottom: var(--section-padding);
@@ -778,9 +780,136 @@ header .container .main-nav .mega-menu .links a i{
     color: var(--text-color);
     font-size: 18px;
 }
-/* Start Team-Members */
-
 /* End Team-Members */
+/* Start Sevices */
+.services {
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+    position: relative;
+    background-color: var(--section-color);
+}
+.services .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill , minmax(300px , 1fr));
+    gap: 30px;
+}
+.services .container .box {
+    background-color: #fff;
+    position: relative;
+    padding:30px 0 0;
+    text-align: center;
+    box-shadow: 0 0 10px #ddd;
+    transition: var(--transition-time);
+}
+.services .container .box::before {
+    content: '';
+    position: absolute;
+    top: 0 ;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--main-color);
+    height: 4px;
+    width: 0;
+    transition: var(--transition-time);
+}
+.services .container .box:hover::before {
+    width: 100%;
+}
+.services .container .box:hover {
+    transform: translateY(-10px);
+}
+.services .container .box i {
+    color: var(--text-color);
+}
+.services .container .box h3 {
+    color: var(--main-color);
+    font-size: 25px;
+    margin-top: 20px 0 40px;
+}
+.services .container .box .link {
+    position: relative;
+    padding: 15px;
+    background-color: #f9f9f9;
+}
+.services .container .box .link::before {
+    counter-increment: services-counter;
+    content: '0' counter(services-counter);
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 27px;
+    color:#fff;
+    background-color: var(--main-color);
+    height: 100%;
+    width: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+}
+.services .container .box .link::after {
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 71px;
+    background-color: #d5d5d5;
+    width: 40px;
+    height: 100%;
+    transform: skew(20deg, 1deg);
+}
+.services .container .box .link a {
+    text-align: right;
+    display: block;
+    padding-right: 10px;
+    font-size: 16px;
+    color: var(--main-color);
+    font-weight: 600;
+}
+/* End Sevices */
+/* Start Our-Skills */
+.our-skills {
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+    position: relative;
+}
+.our-skills .container {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+@media (max-width: 992px ){
+    .our-skills .container img {
+        display: none;
+    }
+}
+.our-skills .container .skills {
+    flex: 1;
+}
+.our-skills .skills h3 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.our-skills .skills h3 span {
+    color: var(--main-color);
+    padding: 3px 3px;
+    border: 1px solid #aaa;
+    font-size: 12px;
+    border-radius: 6px;
+}
+.our-skills .skills .skill .progres-holder {
+    height: 30px;
+    background-color: #eee;
+    position: relative;
+}
+.our-skills .skills .skill .progres-holder span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: var(--main-color);
+}
+/* End Our-Skills */
 /* Start Animation */
 /* Animation up and down */
 @keyframes up-and-down {

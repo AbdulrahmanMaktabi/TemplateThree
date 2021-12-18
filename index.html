@@ -17,6 +17,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- up button -->
+    <span class="up-btn"><i class="fas fa-arrow-up"></i></span>
     <!-- Start Header -->
     <header>
         <div class="container">
@@ -57,7 +59,8 @@
     <div class="landing">
         <div class="container">
             <div class="text">
-                <h1>Welcome, To my Website</h1>
+                <h1>Welcome, To my </h1>
+                <h1 class="typing">Test</h1>
                 <p>Here Iam gonna share everything about my life. Books Iam reading, Games Iam Playing, Stories and Events</p>
             </div>
             <div class="image">
@@ -500,25 +503,25 @@
                 <div class="skill">
                     <h3>HTML<span>80%</span></h3>
                     <div class="progres-holder">
-                        <span style="width:80%"></span>
+                        <span class="prg" style="width:0%" data-prg="80%"></span>
                     </div>
                 </div>
                 <div class="skill">
                     <h3>CSS<span>75%</span></h3>
                     <div class="progres-holder">
-                        <span style="width:75%"></span>
+                        <span class="prg" style="width:0%" data-prg="75%"></span>
                     </div>
                 </div>
                 <div class="skill">
                     <h3>JS<span>90%</span></h3>
                     <div class="progres-holder">
-                        <span style="width:90%"></span>
+                        <span class="prg" style="width:00%" data-prg="90%"></span>
                     </div>
                 </div>
                 <div class="skill">
                     <h3>PHP<span>90%</span></h3>
                     <div class="progres-holder">
-                        <span style="width:90%"></span>
+                        <span class="prg" style="width:0%" data-prg="90%"></span>
                     </div>
                 </div>
             </div>
@@ -715,22 +718,22 @@
         <div class="container">
             <div class="box">
                 <i class="fas fa-user-check fa-2x"></i>
-                <h2>150</h2>
+                <h2 class="count" data-goal="150">0</h2>
                 <p>clients</p>
             </div>
             <div class="box">
                 <i class="fas fa-code fa-2x"></i>
-                <h2>240</h2>
+                <h2 class="count" data-goal="250">0</h2>
                 <p>projects</p>
             </div>
             <div class="box">
                 <i class="fas fa-globe-americas fa-2x"></i>
-                <h2>50</h2>
+                <h2 class="count" data-goal="10">0</h2>
                 <p>Countries</p>
             </div>
             <div class="box">
                 <i class="far fa-money-bill-alt fa-2x"></i>
-                <h2>500</h2>
+                <h2 class="count" data-goal="500">0</h2>
                 <p>money</p>
             </div>
         </div>
@@ -802,5 +805,7 @@
         <p class="end">Made With &lt;3 By Abdulrahman</p>
     </footer>
     <!-- End Footer -->
+    <!-- JS -->
+    <script src="./JS/app.js"></script>
 </body>
 </html>

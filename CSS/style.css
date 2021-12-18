@@ -1,4 +1,4 @@
-/* Start Global R.main-naves */
+/* Start Global  */
 * , *::before , *::after {
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -14,6 +14,18 @@ ul {
 }
 a {
     text-decoration: none;
+}
+/* up button */
+.up-btn {
+    background-color: var(--main-color);
+    color:#fff;
+    position: fixed;
+    bottom:20px;
+    right: -40px;
+    padding:7px 10px;
+    cursor: pointer;
+    z-index: 9999;
+    transition: var(--transition-time);
 }
 .special-title {
     display: block;
@@ -347,12 +359,17 @@ header .container .main-nav .mega-menu .links a i{
     .landing .container .text {
         text-align: center;
     }
+    .landing .container .text h1{
+        font-size: 30px !important;
+    }
+
 }
 .landing .container .text h1{
     font-weight: 700;
     text-transform: capitalize;
     font-size: 38px;
     margin-bottom: 10px;
+    display: inline;
 }
 .landing .container .text p{
     font-size: 24px;
@@ -920,6 +937,8 @@ header .container .main-nav .mega-menu .links a i{
     left: 0;
     height: 100%;
     background-color: var(--main-color);
+    transition: width var(--transition-time);
+
 }
 /* End Our-Skills */
 /* Start Works */
@@ -1732,3 +1751,16 @@ footer .end {
 }
 /* End Animation */
 /* End Porject */
+/* typing effect */
+.typing {
+    color:var(--main-color);
+    position: relative;
+}
+.typing::after {
+    content: '';
+    position: absolute;
+    width:1px;
+    height: 60%;
+    right: -10px;
+    border-right: 5px solid var(--main-color);
+}
